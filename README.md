@@ -1,5 +1,8 @@
 The functionalities I only created are: Login, Register, and Chat function but I wasn't able to create a notification and contact list functionality and for other features I included image upload. 
 
+
+For the search button, you must specify the username/display name you just created to start chat. 
+
 ## Available Scripts
 
 In the project directory, you can run:
