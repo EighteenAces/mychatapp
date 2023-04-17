@@ -18,13 +18,14 @@
 
 
 .formContainer {
-    background-color: #a7bcff;
+    background-color: whitesmoke;
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
 
     .formWrapper {
+        font-family: Arial, Helvetica, sans-serif;
         background-color: white;
         padding: 20px 60px;
         border-radius: 10px;
@@ -34,14 +35,15 @@
         align-items: center;
 
         .logo {
-            color: #5d5b8d;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #0784ea;
             font-weight: bold;
-            font-size: 24px;
+            font-size: 30px;
         }
 
         .title {
-            color: #5d5b8d;
-            font-size: 12px;
+            color: #0784ea;
+            font-size: 15px;
         }
 
         form {
@@ -53,15 +55,36 @@
                 padding: 15px;
                 border: none;
                 width: 250px;
-                border-bottom: 1px solid #a7bcff;
+                border-bottom: 1px solid #0784ea;
 
                 &::placeholder {
                     color: rgb(175, 175, 175);
                 }
             }
 
+            img {
+                position: absolute;
+                right: 41%;
+                width: 20px;
+                bottom: 315px;
+            }
+
+            .imageUpload {
+                img {
+                    position: absolute;
+                    bottom: 255px;
+                    left: 41%;
+                }
+
+                p{
+                   position: relative;
+                   left: 46px;
+                   top: -8px;
+                }
+            }
+
             button {
-                background-color: #7b96ec;
+                background-color: #0784ea;
                 color: white;
                 padding: 10px;
                 font-weight: bold;
@@ -69,12 +92,16 @@
                 cursor: pointer;
             }
 
+            span {
+                color: red;
+            }
+
             label {
                 font-family: Arial, Helvetica, sans-serif;
                 display: flex;
                 align-items: center;
                 gap: 10px;
-                color: #8da4f1;
+                color: #0784ea;
                 font-size: 12px;
                 cursor: pointer;
 
@@ -85,7 +112,7 @@
         }
 
         p {
-            color: #5d5b8d;
+            color: #0784ea;
             font-size: 12px;
             margin-top: 10px;
         }
@@ -93,7 +120,7 @@
 }
 
 .home {
-    background-color: #a7bcff;
+    background-color: whitesmoke;
     height: 100vh;
     display: flex;
     align-items: center;
@@ -113,14 +140,14 @@
 
         .sidebar {
             flex: 1;
-            background-color: #3e3c61;
+            background-color: #e2e2ea;
             position: relative;
 
             .navbar {
                 font-family: Arial, Helvetica, sans-serif;
                 display: flex;
                 align-items: center;
-                background-color: #2f2d52;
+                background-color: #0784ea;
                 height: 50px;
                 padding: 10px;
                 justify-content: space-between;
@@ -132,6 +159,11 @@
                     @include tablet {
                         display: none;
                     }
+
+                    img {
+                        width: 30px;
+                        display: flex;
+                    }
                 }
 
                 .user {
@@ -139,7 +171,7 @@
                     gap: 10px;
 
                     img {
-                        background-color: #ddddf7;
+                        background-color: #0784ea;
                         height: 23px;
                         width: 23px;
                         border-radius: 50%;
@@ -148,9 +180,11 @@
 
                     button {
                         font-family: Arial, Helvetica, sans-serif;
-                        background-color: #5d5b8d;
+                        background-color: #034aef;
+                        border-radius: 10%;
+                        font-weight: bold;
                         color: #ddddf7;
-                        font-size: 10px;
+                        font-size: 12px;
                         border: none;
                         cursor: pointer;
 
@@ -172,7 +206,7 @@
                     input {
                         background-color: transparent;
                         border: none;
-                        color: white;
+                        color: black;
                         outline: none;
 
                         &::placeholder {
@@ -182,17 +216,75 @@
                 }
             }
 
+            .notificationBox {
+                flex: 2;
+            }
+
+            .notifWrapper {
+                height: 15px;
+                background-color: #e1e1e1;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 10px;
+                color: whitesmoke;
+
+            }
+
+            .notifIcon {
+                display: flex;
+                gap: 70px;
+
+                img {
+                    height: 20px;
+                    cursor: pointer;
+
+                    &:hover {
+                        background-color: #2360ef;
+                    }
+                }
+
+                .iconNotify {
+
+                    .img {
+                        position: relative;
+                        text-decoration: none;
+                        padding: 15px 26px;
+                        position: relative;
+                        display: inline-block;
+                        border-radius: 2px;
+                    }
+
+                    .badge {
+                        position: absolute;
+                        font-family: Arial, Helvetica, sans-serif;
+                        font-size: 12px;
+                        top: 110px;
+                        padding: 3px;
+                        font-weight: bold;
+                        color: white;
+                        background-color: red;
+                        border-radius: 50%;
+
+                        &:hover {
+                            background-color: #2360ef;
+                        }
+                    }
+                }
+
+            }
+
             .userChat {
                 font-family: Arial, Helvetica, sans-serif;
                 padding: 10px;
                 display: flex;
                 align-items: center;
                 gap: 10px;
-                color: white;
+                color: black;
                 cursor: pointer;
 
                 &:hover {
-                    background-color: #2f2d52;
+                    background-color: #3d9deb;
                 }
 
                 img {
@@ -210,37 +302,39 @@
 
                     p {
                         font-size: 14px;
-                        color: lightgray;
+                        color: rgb(99, 99, 99);
                     }
                 }
             }
         }
 
         .chat {
+            font-family: Arial, Helvetica, sans-serif;
             flex: 2;
 
             .chatInfo {
                 height: 50px;
-                background-color: #5d5b8d;
+                background-color: #dcdce3;
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
                 padding: 10px;
-                color: lightgray;
+                color: black;
 
                 .chatIcons {
                     display: flex;
                     gap: 10px;
 
                     img {
-                        height: 24px;
+                        height: 18px;
                         cursor: pointer;
                     }
                 }
             }
 
             .messages {
-                background-color: #ddddf7;
+                font-family: Arial, Helvetica, sans-serif;
+                background-color: #f8f8f8;
                 padding: 10px;
                 height: calc(100% - 160px);
                 overflow: scroll;
@@ -289,7 +383,7 @@
                             align-items: flex-end;
 
                             p {
-                                background-color: #8da4f1;
+                                background-color: #0784ea;
                                 color: white;
                                 border-radius: 0px 10px 10px 10px;
                                 max-width: max-content;
@@ -311,7 +405,7 @@
                     width: 100%;
                     border: none;
                     outline: none;
-                    color: #2f2d52;
+                    color: #0784ea;
                     font-size: 18px;
 
                     &::placeholder {
@@ -333,11 +427,62 @@
                         border: none;
                         padding: 10px 15px;
                         color: white;
-                        background-color: #8da4f1;
+                        background-color: #0784ea;
                         cursor: pointer;
                     }
                 }
             }
         }
     }
+}
+
+.counter {
+    width: 5px;
+    height: 5px;
+    background-color: red;
+    border-radius: 50%;
+    padding: 5px;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: -5px;
+    right: -5px;
+}
+
+.notifications {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background-color: white;
+    color: black;
+    font-weight: 300;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.notification {
+    padding: 5px;
+    font-size: 14px;
+}
+
+.nButton {
+    background-color: #0784ea;
+    color: whitesmoke;
+    outline: auto;
+    border-radius: 10px;
+    width: 105%;
+    padding: 5px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+.new-message-alert {
+    background-color: #0784ea;
+    height: 15px;
+    width: 15px;
+    border-bottom: 50%;
 }
